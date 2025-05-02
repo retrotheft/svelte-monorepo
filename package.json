@@ -1,0 +1,24 @@
+{
+  "name": "@svelte-monorepo/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "library:dev": "pnpm -F @svelte-monorepo/svelte-library-example run dev",
+    "spa:dev": "pnpm -F @svelte-monorepo/svelte-spa-example run dev",
+    "site:dev": "pnpm -F @svelte-monorepo/svelte-site-example run dev",
+    "dev": "pnpm -r run dev",
+    "library:build": "pnpm -F @svelte-monorepo/svelte-library-example run build",
+    "spa:build": "pnpm -F @svelte-monorepo/svelte-spa-example run build",
+    "site:build": "pnpm -F @svelte-monorepo/svelte-site-example run build",
+    "build": "pnpm -r run dev",
+    "clean": "find ./ -name node_modules -type d -exec rm -rf {} +"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+     "node": ">=20.10.0",
+     "pnpm": ">=8.11.0"
+  }
+}
