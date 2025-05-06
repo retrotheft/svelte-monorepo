@@ -22,20 +22,20 @@ packages:
 
 ## Scripts
 
-- add script shortcuts for sub projects to root
+- add script shortcuts for sub projects to root (I swapped the order from Scott's course to keep the command the same when typing)
 
 ```json
 "scripts": { // -F means filter
-  "library:dev": "pnpm -F @svelte-monorepo/svelte-library-example run dev",
-  "spa:dev": "pnpm -F @svelte-monorepo/svelte-spa-example run dev",
-  "site:dev": "pnpm -F @svelte-monorepo/svelte-site-example run dev"
+  "dev:library": "pnpm -F @svelte-monorepo/svelte-library-example run dev",
+  "dev:spa": "pnpm -F @svelte-monorepo/svelte-spa-example run dev",
+  "dev:site": "pnpm -F @svelte-monorepo/svelte-site-example run dev"
 }
 ```
 
 - to run scripts from root just use:
 
 ```sh
-pnpm spa:dev
+pnpm dev:spa
 ```
 
 - add recursive dev script (optional)
@@ -123,7 +123,7 @@ pnpm -F @svelte-monorepo/svelte-spa-example add {package-name}
 
 ```json
 "scripts": {
-   "all:update": "pnpm -r udpate -i -L" // -i means interactive, -L means latest
+   "update:all": "pnpm -r udpate -i -L" // -i means interactive, -L means latest
 }
 ```
 
